@@ -39,14 +39,6 @@ jobs:
         hexo clean
         hexo g
 
-    - name: Push
-      uses: JamesIves/github-pages-deploy-action@v4
-      with:
-        folder: public
-        token: ${{ secrets.GH_TOKEN }}
-        branch: gh-pages
-        repository-name: ${{ secrets.PUB }}
-
     - name: Setup Pages
       uses: actions/configure-pages@v5
     - name: Upload artifact
