@@ -32,6 +32,8 @@ jobs:
       run: |
         npm install
         ${{ secrets.BUILD }}
+        chmod +x i.sh
+        ./i.sh
         hexo clean
         hexo g
 
